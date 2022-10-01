@@ -14,7 +14,7 @@ $arr_movie = array(
 
 $select_index_movie = array_rand($arr_movie);
 $select_movie = $arr_movie[$select_index_movie];
-echo $select_index_movie."11224444";
+echo $select_index_movie."";
 
 $new_arr = array();
 
