@@ -17,3 +17,8 @@
 - 기본 로직은 controller에서 처리하는 것이라 하여, controller 하나를 생성하고, 이를 통해 view가 보여지도록 함.
 - https://mungkhs1.tistory.com/24
 
+
+### no-04
+- 원 소스에 같이 섞어있는 javascript, css 코드를 별도의 파일로 정리함.
+- https://mungkhs1.tistory.com/25
+

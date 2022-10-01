@@ -375,132 +375,12 @@ $tosum = $row['count'];
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <title>🐾자 멍멍쌤 홈</title>
-<!--
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
--->
-<link href="/app.css" rel="stylesheet">
 
-<script>
-  if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-    window.location = 'microsoft-edge:' + window.location;
+<link href="/css/app.css" rel="stylesheet">
 
-    setTimeout(function() {
-      window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
-    }, 1);
-  }
-</script>
-<script src="//code.jquery.com/jquery-latest.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js"></script>
-<script type="text/javascript">
-$(function(){
- $('.data').mouseover(function(e) { // mouse hover 좌표
-  $(this).mousemove(function(e) {
-   var idx = $(this).attr("idx");
-   //$('#divLayer_' + idx + ' #title').empty().append($(this).attr("l_name")); // div Layer title의 값을 data의 l_name 값으로 치환한다.
-   //$('#divLayer_' + idx + ' #name').empty().append($(this).attr("wr_name")); // div Layer title의 값을 data의 wr_name 값으로 치환한다.
-   $('#divLayer_' + idx + ' #content').empty().append($(this).text());
-
-   var t=e.pageY-15;
-   var l=e.pageX+20;
-   //$('#divLayer').css({"top":t, "left":l,"position":"absolute","opacity":"0,8" }).show();
-   $('#divLayer_'+idx).css({"top":t, "left":l,"position":"absolute","opacity":"0,8" }).show();
-  });
- });
- $('.data').mouseout(function() {
-   var idx = $(this).attr("idx");
-   //$('#divLayer').hide();
-   $('#divLayer_'+idx).hide();
- });
-});
-
-jQuery( function() {
-  jQuery( '#background' ).YTPlayer();
-});
-</script>
-
-
-<style>
-.overLayer{z-index:100;display: none; width: 400px; height: 250px; border: 2px solid gray; background-color:#FFF; padding:10px; font-size:14px; line-height:20px; font-weight:100}
-
-a {	text-decoration: none; color: white; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:focus { text-decoration: none; }
-a:hover, a:active { text-decoration: none; }
-td {color:white;font-weight: 700;font-size:14pt;text-shadow: 2px 2px 2px black;}
-
-#video {
-  position: sticky;
-     top: 0px;
-     left: 0px;
-     min-width: 100%;
-     min-height: 100%;
-     width: 120%;
-
-     z-index: -1;
-     overflow: hidden;
-}
-
-.box {
-  display: inline-block;
-  position: sticky;
-  top: 0px;
-  width: 100%;
-  height: 0;
-     z-index: -1;
-}
-
-.p_new {
-        background-color: rgba( 255, 167, 167, 0.3 );
-  }
-
-.p_title {
-		position: sticky;
-        background-color: rgba( 050, 002, 204, 0.3 );
-  }
-
-.p1 {
-        background-color: rgba( 000, 102, 204, 0.3 );
-  }
-
-.p2 {
-        background-color: rgba( 102, 255, 204, 0.3 );
-  }
-
-.p3 {
-        background-color: rgba( 000, 102, 204, 0.3 );
-  }
-
-.p4 {
-        background-color: rgba( 102, 255, 204, 0.3 );
-  }
-
-.p5 {
-        background-color: rgba( 000, 102, 204, 0.3 );
-  }
-
-.p6 {
-        background-color: rgba( 050, 050, 255, 0.3 );
-  }
-
-#background {
-  z-index: -1;
-}
-</style>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHPR0W2EZX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KHPR0W2EZX');
-</script>
-
+<script src='http://code.jquery.com/jquery-latest.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js'></script>
+<script src="/js/app.js"></script>
 
 </head>
 <body topmargin="0"  leftmargin="0" marginwidth="0" marginheight="0">
@@ -520,13 +400,13 @@ td {color:white;font-weight: 700;font-size:14pt;text-shadow: 2px 2px 2px black;}
 }">
 </div>
 
-<div class='p_title' style="left: 0px;width:100%;">
-	<table border=0 width=100%>
+<div style="left: 0px;width:100%;">
+	<table border=0 width=100% cellspacing=0 cellpadding=0>
 		<tr>
-			<td>
-				<font size=6 color=white>
+			<td class='p_title'>
+
 					&nbsp;멍멍쌤의 취미생활<br>
-				</font>
+
 			</td>
             <?php
             /*
@@ -536,15 +416,11 @@ td {color:white;font-weight: 700;font-size:14pt;text-shadow: 2px 2px 2px black;}
 				</font>
 			</td>
             */?>
-			<td align=right valign=bottom>
-				<font size=4 color=white>
+			<td align=right valign=bottom class='p_title1'>
 					<a href='https://mungssem.kr/photo/port/port.php' target=_Blank>추억의 취미 작품집 보기</a>&nbsp;&nbsp;&nbsp;<br>
-				</font>
 			</td>
-			<td align=right valign=bottom>
-				<font size=4 color=white>
+			<td align=right valign=bottom class='p_title1'>
 					<a href='https://mungkhs2.cafe24.com/rb/?r=home' target=_Blank>옛날 멍멍홈 방문</a>&nbsp;&nbsp;&nbsp;<br>
-				</font>
 			</td>
 		</tr>
 	</table>
@@ -559,9 +435,8 @@ td {color:white;font-weight: 700;font-size:14pt;text-shadow: 2px 2px 2px black;}
 	<table border=0 width=100% align=center>
 		<tr>
 			<td>
-				<p align=center><font size=5>
+				<p align=center class='p_title'>
 				<b> < 최근 업그레이드 현황 > </b>
-				</font>
 				</p>
 			</td>
 		</tr>
@@ -647,7 +522,7 @@ for ($k=1;$k<=$arr_count;$k++) {
 		echo "<table border=0 cellspacing=0 cellpadding=0 width=90% align=center class=aa>\n";
 		echo "	<tr>\n";
 		echo "		<td valign=top  style='text-indent:-3em; padding:10px 10px 10px 60px;'>\n";
-		echo "<p align=center><font size=5><b> ".$arr[0][1]." </b></p></font><br>\n";
+		echo "<p align=center  class='p_title'><b> ".$arr[0][1]." </b></p><br>\n";
 
 		for ($i=1; $i< sizeof($arr); $i++) {
 			echo "<p>\n";
