@@ -22,3 +22,7 @@
 - 원 소스에 같이 섞어있는 javascript, css 코드를 별도의 파일로 정리함.
 - https://mungkhs1.tistory.com/25
 
+
+### no-05
+- PHP 로직을 controller로 이동 및 view로 값 전달
+- https://mungkhs1.tistory.com/26
