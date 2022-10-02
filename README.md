@@ -31,3 +31,8 @@
 ### no-06
 - 블레이드 파일 안에 있는 남아있는 PHP 코드들을 블레이드 문법에 맞게 수정
 - https://mungkhs1.tistory.com/27
+
+
+### no-07
+- 외부 블레이드 파일, component 활용
+- https://mungkhs1.tistory.com/28

@@ -413,6 +413,20 @@ class IndexController extends Controller
             )
         );
 
+        $arr_count++;
+        ${"arr_$arr_count"} = array(
+            array($arr_count, "< 알림 사항 >"),
+            array(
+                "2022-10-02", "", "요즘 하고 있는 취미생활",
+                "https://indischool.com/boards/announcement/37251001?page=2",
+                "",
+                " 여름방학 부터 당분간 계속 쪼랩(인디스쿨 취미 코딩 커뮤니티)에서 라라벨(laravel) 공부중입니다. 그래서, 잠시 모든 개발을 멈추게 되어습니다. 추후
+                라라벨 공부가 끝나면 다시 취미 개발을 시작할 예정입니다.",
+                "* 여름방학 부터 당분간 계속 쪼랩(인디스쿨 취미 코딩 커뮤니티)에서 라라벨(laravel) 공부중입니다. 그래서, 잠시 모든 개발을 멈추게 되어습니다. 추후
+                라라벨 공부가 끝나면 다시 취미 개발을 시작할 예정입니다."
+            ),
+        );
+
         $new_arr = array();
         $timenow = date("Ymd");
 
@@ -492,6 +506,7 @@ class IndexController extends Controller
             'arr_4' => $arr_4,
             'arr_5' => $arr_5,
             'arr_6' => $arr_6,
+            'arr_7' => $arr_7,
             'new_arr' => $new_arr,
             'timenow' => $timenow,
         ]);

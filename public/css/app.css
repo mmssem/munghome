@@ -99,6 +99,10 @@ p {
     background-color: rgba( 050, 050, 255, 0.3 );
 }
 
+.p7 {
+    background-color: rgba(232, 247, 147, 0.3);
+}
+
 #background {
     z-index: -1;
 }
