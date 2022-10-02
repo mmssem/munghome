@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class IndexController extends Controller
 {
     public function index()
@@ -415,23 +413,24 @@ class IndexController extends Controller
             )
         );
 
-
         $new_arr = array();
         $timenow = date("Ymd");
 
-        for ($m = 1; $m < $arr_count; $m++) {
+        for ($m = 1; $m <= $arr_count; $m++) {
             $tmparr = ${"arr_$m"};
+
             for ($n = 1; $n < sizeof($tmparr); $n++) {
                 $timetarget = $tmparr[$n][0];
                 $dateDifference = abs(strtotime($timenow) - strtotime($timetarget));
                 $days = floor($dateDifference / (60 * 60 * 24));
                 if ($days < 30) {
-
                     array_push($tmparr[$n], $tmparr[0][0], $n);
                     array_push($new_arr, $tmparr[$n]);
                 }
             }
         }
+
+
 
         for ($k = 0; $k < sizeof($new_arr) - 1; $k++) {
             for ($a = $k + 1; $a < sizeof($new_arr); $a++) {
@@ -493,7 +492,6 @@ class IndexController extends Controller
             'arr_4' => $arr_4,
             'arr_5' => $arr_5,
             'arr_6' => $arr_6,
-            //아래 부분을 새로 추가
             'new_arr' => $new_arr,
             'timenow' => $timenow,
         ]);

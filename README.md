@@ -26,3 +26,8 @@
 ### no-05
 - PHP 로직을 controller로 이동 및 view로 값 전달
 - https://mungkhs1.tistory.com/26
+
+
+### no-06
+- 블레이드 파일 안에 있는 남아있는 PHP 코드들을 블레이드 문법에 맞게 수정
+- https://mungkhs1.tistory.com/27
