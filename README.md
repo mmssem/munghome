@@ -36,3 +36,13 @@
 ### no-07
 - 외부 블레이드 파일, component 활용
 - https://mungkhs1.tistory.com/28
+
+
+### no-08
+- (DB) Model 및 기타 파일 생성
+- https://mungkhs1.tistory.com/29
+
+
+### no-09
+- (DB) 더미데이터를 한글로 만드는 방법
+- https://mungkhs1.tistory.com/30
