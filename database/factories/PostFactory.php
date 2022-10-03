@@ -18,15 +18,15 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
+            'order' => 1,
             'category_id' => Category::factory(),
-            'slug' => $this->faker->unique()->word(),
             'created' => now(),
-            'title' => $this->faker->sentence(),
             'version' => '1.0',
+            'title' => $this->faker->sentence(),
             'excerpt' => $this->faker->sentence(),
-            'body' => '<p>'.implode('</p><p>', $this->faker->paragraphs(6)).'</p>',
             'link_blog' => 'https://mungkhs.tistory.com/104',
             'link_youtube' => 'https://youtu.be/PoLoiscfgMo',
+            'body' => '<p>'.implode('</p><p>', $this->faker->paragraphs(6)).'</p>',
         ];
     }
 }

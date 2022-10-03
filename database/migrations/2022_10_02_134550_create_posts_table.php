@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->integer('order');
             $table->foreignId('category_id');
-            $table->string('slug')->unique();
             $table->date('created');
             $table->string('title');
             $table->string('version');

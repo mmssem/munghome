@@ -51,3 +51,12 @@
 ### no-10
 - (DB) 모델, DB 활용 연습
 - https://mungkhs1.tistory.com/31
+
+
+### no-11
+- (DB) 기존 데이터 배열을 DB로 변환
+- https://mungkhs1.tistory.com/32
+
+### no-12
+- (DB) DB 및 모델을 이용한 최종 완성
+- https://mungkhs1.tistory.com/33

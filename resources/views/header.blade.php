@@ -3,7 +3,7 @@
         <table border=0 width=100% cellspacing=0 cellpadding=0>
             <tr>
                 <td class='p_title'>
-                    &nbsp;🐾자 멍멍쌤의 취미생활1<br>
+                    &nbsp;🐾자 멍멍쌤의 취미생활<br>
                 </td>
                 <?php
                 /*
