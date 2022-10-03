@@ -46,3 +46,8 @@
 ### no-09
 - (DB) 더미데이터를 한글로 만드는 방법
 - https://mungkhs1.tistory.com/30
+
+
+### no-10
+- (DB) 모델, DB 활용 연습
+- https://mungkhs1.tistory.com/31
