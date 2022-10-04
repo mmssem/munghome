@@ -58,5 +58,5 @@
 - https://mungkhs1.tistory.com/32
 
 ### no-12
-- (DB) DB 및 모델을 이용한 최종 완성
+- (DB) DB 및 모델을 이용하여 구현
 - https://mungkhs1.tistory.com/33
