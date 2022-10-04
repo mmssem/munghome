@@ -6,7 +6,7 @@
     <title>🐾자 멍멍쌤 홈</title>
 
     <link href="/css/app.css" rel="stylesheet">
-
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src='http://code.jquery.com/jquery-latest.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js'></script>
     <script src="/js/app.js"></script>
