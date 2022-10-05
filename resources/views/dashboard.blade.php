@@ -35,7 +35,7 @@
                                                 <form method="POST" action="/dashboard/{{ $post->id }}">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button class="text-xs text-gray-400">Delete</button>
+                                                    <button class="text-xs text-red-400" onclick="return confirm('정말로 삭제하길 원하시나요?')">Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

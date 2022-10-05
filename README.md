@@ -80,3 +80,8 @@
 ### no-16
 - 관리자 화면에서 게시글 수정하기
 - https://mungkhs1.tistory.com/37
+
+
+### no-17
+- 관리자 화면에서 게시글 삭제하기
+- https://mungkhs1.tistory.com/38

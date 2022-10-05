@@ -53,7 +53,12 @@ class AdminPostController extends Controller
         ]);
     }
 
+    public function destroy(Post $post)
+    {
+        $post->delete();
 
+        return back()->with('success', '글이 삭제되었습니다.');
+    }
 
 
 
@@ -71,14 +76,6 @@ class AdminPostController extends Controller
         return redirect('/')->with('success', '게시글이 잘 저장 되었습니다.');
 
     }
-
-    public function destroy(Post $post)
-    {
-        $post->delete();
-
-        return back()->with('success', '글이 삭제되었습니다.');
-    }
-
 
 }
 

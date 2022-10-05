@@ -26,6 +26,7 @@ Route::get('/view2', function () {
 Route::get('/dashboard', [AdminPostController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/dashboard/{post}/edit', [AdminPostController::class,'edit'])->middleware(['auth', 'verified']);
 Route::patch('/dashboard/{post}', [AdminPostController::class,'update'])->middleware(['auth', 'verified']);
+Route::delete('/dashboard/{post}', [AdminPostController::class,'destroy'])->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
 
