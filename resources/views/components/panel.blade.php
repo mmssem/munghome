@@ -1,13 +1,13 @@
-@props(['arr','k','timenow'])
+@props(['post','category','k'])
 
-<div class='p{{ $arr[0][0] }}' style='left: 0px;width:100%;'>
+<div class='p{{ $k }}' style='left: 0px;width:100%;'>
     <br>
     <table border=0 cellspacing=0 cellpadding=0 width=90% align=center class=aa>
         <tr>
             <td>
                 <p align=center class='p_title'>
                     <b>
-                        {{ $arr[0][1] }}
+                        {{ $category }}
                     </b>
                 </p>
             </td>
@@ -19,29 +19,29 @@
         </tr>
         <tr>
             <td style='text-indent:-3em; padding:10px 10px 10px 60px;'>
-                @for ($i = 1; $i < sizeof($arr); $i++)
+                @foreach ( $post as $post_one)
                     <p>
-                        <a href='{{ $arr[$i][3] }}' target='_Blank' class='data'
-                            idx='{{ $arr[0][0] }}_{{ $i }}'>
-                            <img src='/images/ball.gif'>
+                        <a href='{{ $post_one->link_blog }}' target='_Blank' class='data'
+                            idx='{{ $k }}_{{ ($loop->index)+1 }}'>
+                            <img src='/images/ball.gif' class='inline'>
                             @php
-                                $timetarget = $arr[$i][0];
+                                $timenow = date("Ymd");
+                                $timetarget = $post_one->created;
                                 $dateDifference = abs(strtotime($timenow) - strtotime($timetarget));
                                 $days = floor($dateDifference / (60 * 60 * 24));
                             @endphp
                             @if ($days < 30)
-                                <img src='/images/new.gif' width=30>
+                                <img src='/images/new.gif' width=30 class='inline'>
                             @endif
-                            {{ $arr[$i][2] }} V{{ $arr[$i][1] }} ({{ $arr[$i][0] }})
+                            {{ $post_one->title }} V{{ $post_one->version }} ({{ $post_one->created }})
                         </a>
 
-                        @if ($arr[$i][4] != '')
-                            <a href='{{ $arr[$i][4] }}' target='_Blank'><img src='/images/youtube1.png' width=50></a>
+                        @if ($post_one->link_youtube != '')
+                            <a href='{{ $post_one->link_youtube }}' target='_Blank'><img src='/images/youtube1.png' width=50 class='inline'></a>
                         @endif
-                        => {{ $arr[$i][5] }}
+                        => {{ $post_one->excerpt }}
                     </p>
-                @endfor
-
+                @endforeach
                 <br>
             </td>
         </tr>

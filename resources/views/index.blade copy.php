@@ -6,7 +6,7 @@
     <title>🐾자 멍멍쌤 홈</title>
 
     <link href="/css/app.css" rel="stylesheet">
-
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src='http://code.jquery.com/jquery-latest.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js'></script>
     <script src="/js/app.js"></script>
@@ -33,22 +33,30 @@
 
     <p><br></p>
 
-    <x-newpanel2 :new_arr="$new_arr"/>
+    <x-newpanel2 :newposts="$newposts"/>
 
     <p><br></p>
 
-    @for ($k = 1; $k <= $arr_count; $k++)
+    @for ($k = 1; $k <= ($categories->count()); $k++)
 
         @php
-            $arr = ${"arr_$k"};
+            $post = $posts->where('category_id', $k);
         @endphp
 
-        <x-panel2 :arr="$arr" :k="$k" :timenow="$timenow"/>
-
-        <!--레이어 도움말-->
-        @include('layerhelp2')
+        <x-panel2 :post="$post" :category="$categories[$k-1]->name" :k="$k"/>
 
         <p><br></p>
+    @endfor
+
+    @for ($k = 1; $k <= ($categories->count()); $k++)
+
+        @php
+            $post = $posts->where('category_id', $k);
+        @endphp
+
+        <!--레이어 도움말-->
+        <x-layerhelp2 :post="$post" :k="$k"/>
+
     @endfor
 
     <p align=center>&nbsp;</p>

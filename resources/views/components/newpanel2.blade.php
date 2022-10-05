@@ -1,4 +1,4 @@
-@props(['newposts'])
+@props(['new_arr'])
 
 <div class='p_new' style="left: 0px;width:100%;">
     <br>
@@ -19,22 +19,23 @@
         </tr>
         <tr>
             <td style='text-indent:-3em; padding:10px 10px 10px 60px;'>
-                @foreach ( $newposts as $newpost)
+                @for ($k = 0; $k < sizeof($new_arr); $k++)
                     <p>
-                        <a href='{{ $newpost->link_blog }}' target='_Blank' class='data'>
+                        <a href='{{ $new_arr[$k][3] }}' target='_Blank' class='data'
+                            idx='{{ $new_arr[$k][7] }}_{{ $new_arr[$k][8] }}'>
                             <img src='/images/ball.gif'>
 
-                            {{ $newpost->title }} V{{ $newpost->version }} ({{ $newpost->created }})
+                            {{ $new_arr[$k][2] }} V{{ $new_arr[$k][1] }} ({{ $new_arr[$k][0] }})
 
                         </a>
 
-                        @if ($newpost->link_youtube != '')
-                            <a href='{{ $newpost->link_youtube }}' target='_Blank'><img src='/images/youtube1.png'
+                        @if ($new_arr[$k][4] != '')
+                            <a href='{{ $new_arr[$k][4] }}' target='_Blank'><img src='/images/youtube1.png'
                                     width=50></a>
                         @endif
-                        => {{ $newpost->excerpt }}
+                        => {{ $new_arr[$k][5] }}
                     </p>
-                @endforeach
+                @endfor
             </td>
         </tr>
         <tr>

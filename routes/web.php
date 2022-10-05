@@ -15,8 +15,8 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::get('/view', [IndexController::class, 'index']);
-Route::get('/', [PostController::class, 'index']);
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/view', [PostController::class, 'index']);
 
 Route::get('/view2', function () {
     return view('welcome');

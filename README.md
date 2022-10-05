@@ -65,3 +65,8 @@
 ### no-13
 - 로그인 구현을 위한 스타터키트 Breeze 설치 및 로그인 작업
 - https://mungkhs1.tistory.com/34
+
+
+### no-14
+- 로그인 창 뒷배경도 동영상이 보이도록 수정
+- https://mungkhs1.tistory.com/35
