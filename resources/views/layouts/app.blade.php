@@ -9,11 +9,12 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
+
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
 
@@ -31,5 +32,8 @@
                 {{ $slot }}
             </main>
         </div>
+
+
+        <x-flash />
     </body>
 </html>

@@ -75,3 +75,8 @@
 ### no-15
 - 관리자 화면에서 전체 게시글 리스트 한번에 보기
 - https://mungkhs1.tistory.com/36
+
+
+### no-16
+- 관리자 화면에서 게시글 수정하기
+- https://mungkhs1.tistory.com/37

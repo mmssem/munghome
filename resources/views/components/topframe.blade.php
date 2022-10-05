@@ -37,5 +37,6 @@
     <p align=center>&nbsp;</p>
     <p align=center>&nbsp;</p>
 
+    <x-flash />
 </body>
 </html>
