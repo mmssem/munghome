@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\Post;
 use App\Models\Category;
+use Illuminate\Contracts\Session\Session;
+
+
 
 
 class IndexController extends Controller
@@ -30,6 +33,15 @@ class IndexController extends Controller
 
     public function index()
     {
+
+        $viewed = Session::get('viewed_pages', []);
+        dd($viewed);
+        //if(!in_array($page->id, $viewed)){
+        //    $page->increment('views');
+        //    Session::push('viewed_pages', $page->id);
+        //}
+
+
         $select_movie = IndexController::youtube();
 
         $categories = Category::all();

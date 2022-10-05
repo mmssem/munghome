@@ -28,5 +28,9 @@ Route::get('/dashboard/{post}/edit', [AdminPostController::class,'edit'])->middl
 Route::patch('/dashboard/{post}', [AdminPostController::class,'update'])->middleware(['auth', 'verified']);
 Route::delete('/dashboard/{post}', [AdminPostController::class,'destroy'])->middleware(['auth', 'verified']);
 
+Route::get('/dashboard/create', [AdminPostController::class,'create'])->name('create');
+Route::post('/dashboard', [AdminPostController::class,'store']);
+
+
 require __DIR__.'/auth.php';
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\IndexController;
 
 class AdminPostController extends Controller
 {
+
     public function index()
     {
         $select_movie = IndexController::youtube();
@@ -48,8 +49,6 @@ class AdminPostController extends Controller
             'title' => 'required',
             'excerpt' => 'required',
             'body' => 'required',
-            'link_blog' => 'required',
-            'link_youtube' => 'required',
         ]);
     }
 
@@ -60,21 +59,19 @@ class AdminPostController extends Controller
         return back()->with('success', '글이 삭제되었습니다.');
     }
 
-
-
     public function create()
     {
-        return view('admin.posts.create');
+        $select_movie = IndexController::youtube();
+        return view('create',[
+            'select_movie' => $select_movie,
+        ]);
     }
 
     public function store()
     {
-        Post::create(array_merge($this -> validatePost(), [
-            'user_id' => request()->user()->id,
-            'thumbnail' => request()->file('thumbnail')->store('thumbnails')
-        ]));
-        return redirect('/')->with('success', '게시글이 잘 저장 되었습니다.');
+        Post::create($this -> validatePost());
 
+        return redirect('dashboard')->with('success', '게시글이 잘 저장 되었습니다.');
     }
 
 }

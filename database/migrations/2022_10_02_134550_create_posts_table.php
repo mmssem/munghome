@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('version');
             $table->text('excerpt');
             $table->text('body');
-            $table->text('link_blog');
-            $table->text('link_youtube');
+            $table->text('link_blog')->nullable()->default(NULL);
+            $table->text('link_youtube')->nullable()->default(NULL);
             $table->timestamps();
         });
     }

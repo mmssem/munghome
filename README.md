@@ -85,3 +85,8 @@
 ### no-17
 - 관리자 화면에서 게시글 삭제하기
 - https://mungkhs1.tistory.com/38
+
+
+### no-18
+- 관리자 화면에서 새 게시글 작성하기
+- https://mungkhs1.tistory.com/39

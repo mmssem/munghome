@@ -30,9 +30,9 @@
                 </x-form.textarea>
                 <x-form.textarea name='body' kor="본문" required>{{ old('body', $post->body) }}</x-form.textarea>
 
-                <x-form.input name='link_blog' kor="블로그 링크" :value="old('link_blog', $post->link_blog)" required />
+                <x-form.input_null name='link_blog' kor="블로그 링크" :value="old('link_blog', $post->link_blog)" />
 
-                <x-form.input name='link_youtube' kor="유튜브 링크" :value="old('link_youtube', $post->link_youtube)" required />
+                <x-form.input_null name='link_youtube' kor="유튜브 링크" :value="old('link_youtube', $post->link_youtube)" />
 
                 <x-form.input name='order' kor="순서" :value="old('order', $post->order)" required />
 
