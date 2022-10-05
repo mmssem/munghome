@@ -70,3 +70,8 @@
 ### no-14
 - 로그인 창 뒷배경도 동영상이 보이도록 수정
 - https://mungkhs1.tistory.com/35
+
+
+### no-15
+- 관리자 화면에서 전체 게시글 리스트 한번에 보기
+- https://mungkhs1.tistory.com/36
