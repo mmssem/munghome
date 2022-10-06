@@ -7,7 +7,7 @@
                 </td>
                 <td align=center valign=bottom class='p_title1'>
                     <font size=3 color=white>
-                    오늘:11, 어제:22, 전체:33 (since 2003)
+
                     </font>
                 </td>
                 <td valign=bottom class='p_title1'>
