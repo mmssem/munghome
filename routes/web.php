@@ -19,9 +19,9 @@ use App\Http\Controllers\AdminPostController;
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/view', [PostController::class, 'index']);
 
-Route::get('/view2', function () {
-    return view('welcome');
-});
+//Route::get('/view2', function () {
+//    return view('welcome');
+//});
 
 Route::get('/dashboard', [AdminPostController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/dashboard/{post}/edit', [AdminPostController::class,'edit'])->middleware(['auth', 'verified']);
