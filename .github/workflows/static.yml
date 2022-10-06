@@ -17,6 +17,6 @@ jobs:
     - name : Copy .env
       run : cp ./../.env ./
     - name : Directory Permissions
-      run : chmod -R 777 bootstrap/cache && sudo chown -R ${{env.USER_NAME}}:www-data public storage && chmod -R 664 storage/clockwork/index
+      run : chmod -R 777 bootstrap/cache && sudo chown -R ${{env.USER_NAME}}:www-data public storage && chmod -R 664 storage
     - name : faker_ko_KR Lorem.php copy
       run : cp ./../Lorem.php ./vendor/fakerphp/faker/src/Faker/Provider/ko_KR/
